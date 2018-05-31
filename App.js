@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import Header from './src/components/header';
 
 export default class App extends React.Component {
   render() {
@@ -9,6 +10,7 @@ export default class App extends React.Component {
         <Text>Yo! Mike dude! We are in the game!</Text>
         <Text>We are in the game</Text>
         <Text style={{color: 'white'}}>Each game. We are in the game</Text>
+        <Header></Header>
       </View>
     );
   }
