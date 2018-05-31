@@ -6,11 +6,7 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Yoooooo! Mike dude! We are in teh game!</Text>
-        <Text>Yo! Mike dude! We are in the game!</Text>
-        <Text>We are in the game</Text>
-        <Text style={{color: 'white'}}>Each game. We are in the game</Text>
-        <Header></Header>
+        <Header />
       </View>
     );
   }
