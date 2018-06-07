@@ -1,7 +1,16 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
+require('es6-promise').polyfill();
+require('isomorphic-fetch');
 
 class AlbumList extends Component {
+  componentWillMount() {
+    console.log('gfkl');
+    fetch('https://jsonplaceholder.typicode.com/users')
+  .then(response => response.json())
+  .then(json => console.log(json))
+  }
+
   render() {
     const { textStyle, viewStyle } = styles;
     return (
