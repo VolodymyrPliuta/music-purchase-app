@@ -12,12 +12,16 @@ class AlbumList extends Component {
   .then(json => this.setState({ albums: json}));
   }
 
+  renderAlbums() {
+    return this.state.albums.map(albums => <Text>{albums.name}</Text>);
+  }
+
   render() {
-    console.log(this.state)
+    console.log(this.state.albums)
     const { textStyle, viewStyle } = styles;
     return (
       <View style={viewStyle}>
-        <Text style={textStyle}>Album List!!!!</Text>
+        {this.renderAlbums()}
       </View>
     );
   }
