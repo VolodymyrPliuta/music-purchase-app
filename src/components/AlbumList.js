@@ -4,14 +4,16 @@ require('es6-promise').polyfill();
 require('isomorphic-fetch');
 
 class AlbumList extends Component {
+  state = { albums: [] };
   componentWillMount() {
     console.log('gfkl');
     fetch('https://jsonplaceholder.typicode.com/users')
   .then(response => response.json())
-  .then(json => console.log(json))
+  .then(json => this.setState({ albums: json}));
   }
 
   render() {
+    console.log(this.state)
     const { textStyle, viewStyle } = styles;
     return (
       <View style={viewStyle}>
